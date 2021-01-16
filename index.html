@@ -1,11 +1,209 @@
 <!DOCTYPE html>
-<html lang="en">
- <head>
-  <title>Sample page</title>
+<html lang="en">                                                            <!-- This is the Root Element -->
+ <head>                                                                     <!-- Head contains metadata of the document, like title, scripts and style sheets -->
+  <title>(LAB 2) Welcome to eflores21's homepage!</title>                   <!-- Document Title that shows in page tab or browser title bar -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!-- For proper display on a mobile phone -->
+  <link href="style.css" rel="stylesheet">                                  <!-- Links to an empty external style sheet -->
  </head>
- <body>
-  <h1>Sample page</h1>
-  <p>This is a <a href="demo.html">simple</a> sample.</p>
-  <!-- this is a comment -->
+ <body>                                                                     <!-- Represents content of html doc, can only be one in doc -->
+    <header>
+        <h1>Get to Know eflores21</h1>
+        <img src="CS.jpg" alt="CS logo" width="500" height="250">
+    </header>
+  <main>Come get to know eflores21!</main>                              <!-- main represents the dominant content of the body of a document -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Me</a></li>
+      <li><a href="#">My Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <h1>Home</h1>    
+  <h1>About me</h1>                                                     <!-- h1 is a section heading, there are six levels h1-h6 -->
+  <!-- p represents a paragraph -->
+  <p><code>printf("HELLO WORLD!");</code>. My name is Edgar Flores and I am a Computer Science and Engineering major at the 
+      University of California, San Diego. <br> In my studies, I have taken courses pertaining to the subjects of 
+      <span class="course"><b>Advanced Data Structures</b></span>,
+      <span class="course"><b>Discrete Mathematics</b>></span>
+      <span class="course"><b>Theory of Computability</b></span>
+      <span class="course"><b>Systems Programming</b></span>
+      <span class="course"><b>Data Science</b></span>
+      <span class="course"><b>Machine Learning</b></span>.
+      I am also skilled in C, C++, Java, Vim, Unix command line tools and Data Analysis using Python and Pandas.
+    </p>
+      <hr>
+
+  <h2>Interests outside of programming</h2>
+
+  <figure>
+    <img src="piano.jpg"
+         alt="Gorgeous Grand Piano">
+    <figcaption>Fig.1 - Gorgeous Grand Piano</figcaption>
+  </figure>
+
+  <p>I have a bunch of interests outside of programming! I’m a bit of a hobby collector and I 
+      <em>love</em> challenging myself and teaching myself new things. I am always thinking <i>What can I learn next?</i> Some of my hobbies include: 
+      <ul><li>Classical and Contemporary Piano</li>
+        <li>Classical and Contemporary Guitar</li>
+        <li>Electronic Music Production</li>
+        <li>Filmography/Photography</li>
+        <li>Cooking/Baking</li>
+        <li>Video Gaming</li>
+        <li>Strength and Endurance Training</li>
+        <li>Reading</li>
+        <li>Meditation</li>
+        <li>Building Personal Servers and Keeping up with New and Exciting Tech!</li>
+        </ul>
+    </p>
+
+    <section>
+       
+        <h3>Some of my favorite pieces for Classical Guitar and Classical Piano</h3>
+
+        <table>
+            <caption>Favorite Composers and Favorite Pieces</caption>
+            <colgroup>
+                <col>
+                <col span="2" class="Piano">
+                <col span="2" class="Guitar">
+            </colgroup>
+            <tr>
+                <td> </td>
+                <th scope="col">Chopin</th>
+                <th scope="col">Ravel</th>
+                <th scope="col">Tarrega</th>
+                <th scope="col">Barrios</th>
+            </tr>
+            <tr>
+                <th scope="row">Piece</th>
+                <td>Ballade op 23 no 1</td>
+                <td>Jeux D'eau</td>
+                <td>Capricho Arabe</td>
+                <td>La Catedral</td>
+            </tr>
+        </table>
+
+        <h4>Ballade op 23 no 1 by Frederic Chopin</h4>
+        <video controls width="250">
+        
+            <source src="Ballade.mp4"
+                    type="video/mp4">
+        
+            Sorry, your browser doesn't support embedded videos.
+        </video>
+
+        <iframe title="Wikipedia page for Ballade" src="https://en.wikipedia.org/wiki/Ballade_No._1_(Chopin)" width="400" height="300"></iframe>
+
+        <h4>Jeux D'eau by Maurice Ravel (link)</h4>
+        <ol<li><a href="https://www.youtube.com/watch?v=jnKFIp7CahY&ab_channel=Xandertrax">Jeux D'eau by Maurice Ravel</a></li></ol>
+        <details>
+            <summary>Jeux D'eau facts</summary>
+            <p>Jeux D'eau translates to "Water Games" and it was composed for the purpose of entering it into a music writing competition!.</p>
+        </details>
+
+        <h4>Capricho Arabe by Francisco Tarrega (Picture and Audio)</h4>
+        <picture>
+            <source srcset="sheet.jpg"
+                    media="(min-width: 600px)">
+            <img src="tarrega.jpg" alt="" />
+        </picture>
+        <figure>
+            <figcaption>Listen to Capricho Arabe:</figcaption>
+            <audio
+            controls
+            src="caprico.mp3">
+                Your browser does not support the
+                <code>audio</code> element.
+            </audio>
+        </figure>
+
+        <h4>La Catedral by Agustin Barrios (link)</h4>
+
+        <ol<li><a href="https://www.youtube.com/watch?v=wYJ6fSr-on4&ab_channel=ipoodaily">La Catedral</a></li></ol>
+
+    </section>
+
+    <hr/>
+
+    <aside>
+        <label for="Composer-select">Choose your favorite composer for piano:</label>
+        <select id="composer-select">
+            <optgroup label="Romantic">
+            <option>Chopin</option>
+            </optgroup>
+            <optgroup label="Impressionist">
+            <option>Ravel</option>
+        </optgroup>
+        </select>
+
+        <label for="guitar-choice">Choose your favorite composer for guitar:</label>
+        <input list="guitar-composers" id="guitar-choice" name="guitar-choice" />
+        <datalist id="guitar-composers">
+            <option value="Tarrega">
+            <option value="Barrios">
+        </datalist>
+
+        <template>
+            <h2>Guitar</h2>
+            <img src="guitar.jpg" width="214" height="204">
+          </template>
+
+
+    </aside>
+
+
+    <h1>Contact</h1>
+
+    <textarea name="textarea"
+    rows="10" cols="50">Leave Anonymous Feedback Here!
+    </textarea>
+    <button class="Feedback Button"
+        type="button">
+        Leave Feedback
+    </button>
+
+
+
+        <form action="" method="get" class="form">
+            <fieldset>
+                <legend>Contact Me Directly!</legend>
+                <div class="form">
+                <label for="name">Enter your name: </label>
+                <input type="text" name="name" id="name" required>
+                </div>
+                <div class="form">
+                <label for="email">Enter your email: </label>
+                <input type="email" name="email" id="email" required>
+                </div>
+                <div class="form">
+                <input type="submit" value="Contact!">
+                </div>
+            </fieldset>
+        </form>
+        
+        <canvas id="myCanvas" width="100" height="50"></canvas>
+
+
+        <pre> 
+        <strong>
+        Here
+            is   
+                a   
+                very
+                    IMPORTANT
+                        rectangle!</strong>
+        </pre>
+
+
+        <svg width="100" height="30">
+            <rect width="100" height="30" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+        </svg>
+        <!-- Rectangle adopted from w3schools -->
+
+        
+<footer>
+    <p>Author: Edgar Flores</p>
+</footer>
  </body>
 </html>
