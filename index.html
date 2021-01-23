@@ -1,64 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">                                                            <!-- This is the Root Element -->
- <head>                                                                     <!-- Head contains metadata of the document, like title, scripts and style sheets -->
-  <title>(LAB 3) Welcome to eflores21's homepage!</title>                   <!-- Document Title that shows in page tab or browser title bar -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!-- For proper display on a mobile phone -->
-  <link href="style.css" rel="stylesheet">                                  <!-- Links to an empty external style sheet -->
- </head>
- <body>                                                                     <!-- Represents content of html doc, can only be one in doc -->
+<html lang="en">
+<!-- This is the Root Element -->
+
+<head>
+    <!-- Head contains metadata of the document, like title, scripts and style sheets -->
+    <title>(LAB 3) Welcome to eflores21's homepage!</title>
+    <!-- Document Title that shows in page tab or browser title bar -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- For proper display on a mobile phone -->
+    <link href="style.css" rel="stylesheet"> <!-- Links to an empty external style sheet -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+    <!-- internal css, with hover pseudo class/pseudo class selector-->
+    <style>
+        a.highlight:hover {
+            color: #ff0000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Represents content of html doc, can only be one in doc -->
     <header>
-        <h1>Get to Know eflores21</h1>
+        <!-- inline css, with text align and text decoration-->
+        <h1 style="color:blue;text-align:center;text-decoration: underline;">Get to Know eflores</h1>
         <img src="CS.jpg" alt="CS logo" width="500" height="250">
     </header>
-  <main>Come get to know eflores21!</main>                              <!-- main represents the dominant content of the body of a document -->
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About Me</a></li>
-      <li><a href="#">My Projects</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-  <h1>Home</h1>    
-  <h1>About me</h1>                                                     <!-- h1 is a section heading, there are six levels h1-h6 -->
-  <!-- p represents a paragraph -->
-  <p><code>printf("HELLO WORLD!");</code>. My name is Edgar Flores and I am a Computer Science and Engineering major at the 
-      University of California, San Diego. <br> In my studies, I have taken courses pertaining to the subjects of 
-      <span class="course"><b>Advanced Data Structures</b></span>,
-      <span class="course"><b>Discrete Mathematics</b>></span>
-      <span class="course"><b>Theory of Computability</b></span>
-      <span class="course"><b>Systems Programming</b></span>
-      <span class="course"><b>Data Science</b></span>
-      <span class="course"><b>Machine Learning</b></span>.
-      I am also skilled in C, C++, Java, Vim, Unix command line tools and Data Analysis using Python and Pandas.
+    <main>Come get to know eflores21!</main> <!-- main represents the dominant content of the body of a document -->
+    <nav>
+        <ul>
+            <li><a class="highlight" href="#">Home</a></li>
+            <li><a class="highlight" href="#">About Me</a></li>
+            <li><a class="highlight" href="#">My Projects</a></li>
+            <li><a class="highlight" href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <h1>Home</h1>
+    <h1>About me</h1> <!-- h1 is a section heading, there are six levels h1-h6 -->
+    <!-- p represents a paragraph -->
+    <p><code>printf("HELLO WORLD!");</code>. My name is Edgar Flores and I am a Computer Science and Engineering major
+        at the
+        University of California, San Diego. <br> In my studies, I have taken courses pertaining to the subjects of
+        <span class="course"><b>Advanced Data Structures</b></span>,
+        <span class="course"><b>Discrete Mathematics</b>></span>
+        <span class="course"><b>Theory of Computability</b></span>
+        <span class="course"><b>Systems Programming</b></span>
+        <span class="course"><b>Data Science</b></span>
+        <span class="course"><b>Machine Learning</b></span>.
+        I am also skilled in C, C++, Java, Vim, Unix command line tools and Data Analysis using Python and Pandas.
     </p>
-      <hr>
+    <hr>
 
-  <h2>Interests outside of programming</h2>
+    <h2>Interests outside of programming</h2>
 
-  <figure>
-    <img src="piano.jpg"
-         alt="Gorgeous Grand Piano">
-    <figcaption>Fig.1 - Gorgeous Grand Piano</figcaption>
-  </figure>
+    <figure>
+        <img src="piano.jpg" alt="Gorgeous Grand Piano">
+        <figcaption>Fig.1 - Gorgeous Grand Piano</figcaption>
+    </figure>
 
-  <p>I have a bunch of interests outside of programming! I’m a bit of a hobby collector and I 
-      <em>love</em> challenging myself and teaching myself new things. I am always thinking <i>What can I learn next?</i> Some of my hobbies include: 
-      <ul><li>Classical and Contemporary Piano</li>
+    <p>I have a bunch of interests outside of programming! I’m a bit of a hobby collector and I
+        <em>love</em> challenging myself and teaching myself new things. I am always thinking <i>What can I learn
+            next?</i> Some of my hobbies include:
+    <ul>
+        <li>Classical and Contemporary Piano</li>
         <li>Classical and Contemporary Guitar</li>
         <li>Electronic Music Production</li>
         <li>Filmography/Photography</li>
-        <li>Cooking/Baking</li>
+        <li>Cooking/Baking <ul>
+                <li>Just started this!</li>
+            </ul>
+        </li>
         <li>Video Gaming</li>
         <li>Strength and Endurance Training</li>
         <li>Reading</li>
         <li>Meditation</li>
         <li>Building Personal Servers and Keeping up with New and Exciting Tech!</li>
-        </ul>
+    </ul>
     </p>
 
     <section>
-       
+
         <h3>Some of my favorite pieces for Classical Guitar and Classical Piano</h3>
 
         <table>
@@ -86,55 +106,56 @@
 
         <h4>Ballade op 23 no 1 by Frederic Chopin</h4>
         <video controls width="250">
-        
-            <source src="Ballade.mp4"
-                    type="video/mp4">
-        
+
+            <source src="Ballade.mp4" type="video/mp4">
+
             Sorry, your browser doesn't support embedded videos.
         </video>
 
-        <iframe title="Wikipedia page for Ballade" src="https://en.wikipedia.org/wiki/Ballade_No._1_(Chopin)" width="400" height="300"></iframe>
+        <iframe title="Wikipedia page for Ballade" src="https://en.wikipedia.org/wiki/Ballade_No._1_(Chopin)"
+            width="400" height="300"></iframe>
 
         <h4>Jeux D'eau by Maurice Ravel (link)</h4>
-        <ol<li><a href="https://www.youtube.com/watch?v=jnKFIp7CahY&ab_channel=Xandertrax">Jeux D'eau by Maurice Ravel</a></li></ol>
-        <details>
-            <summary>Jeux D'eau facts</summary>
-            <p>Jeux D'eau translates to "Water Games" and it was composed for the purpose of entering it into a music writing competition!.</p>
-        </details>
+        <ol<li><a href="https://www.youtube.com/watch?v=jnKFIp7CahY&ab_channel=Xandertrax">Jeux D'eau by Maurice
+                Ravel</a></li>
+            </ol>
+            <details>
+                <summary>Jeux D'eau facts</summary>
+                <p>Jeux D'eau translates to "Water Games" and it was composed for the purpose of entering it into a
+                    music writing competition!.</p>
+            </details>
 
-        <h4>Capricho Arabe by Francisco Tarrega (Picture and Audio)</h4>
-        <picture>
-            <source srcset="sheet.jpg"
-                    media="(min-width: 600px)">
-            <img src="tarrega.jpg" alt="" />
-        </picture>
-        <figure>
-            <figcaption>Listen to Capricho Arabe:</figcaption>
-            <audio
-            controls
-            src="caprico.mp3">
-                Your browser does not support the
-                <code>audio</code> element.
-            </audio>
-        </figure>
+            <h4>Capricho Arabe by Francisco Tarrega (Picture and Audio)</h4>
+            <picture>
+                <source srcset="sheet.jpg" media="(min-width: 600px)">
+                <img src="tarrega.jpg" alt="" />
+            </picture>
+            <figure>
+                <figcaption>Listen to Capricho Arabe:</figcaption>
+                <audio controls src="caprico.mp3">
+                    Your browser does not support the
+                    <code>audio</code> element.
+                </audio>
+            </figure>
 
-        <h4>La Catedral by Agustin Barrios (link)</h4>
+            <h4>La Catedral by Agustin Barrios (link)</h4>
 
-        <ol<li><a href="https://www.youtube.com/watch?v=wYJ6fSr-on4&ab_channel=ipoodaily">La Catedral</a></li></ol>
+            <ol<li><a href="https://www.youtube.com/watch?v=wYJ6fSr-on4&ab_channel=ipoodaily">La Catedral</a></li>
+                </ol>
 
     </section>
 
-    <hr/>
+    <hr />
 
     <aside>
         <label for="Composer-select">Choose your favorite composer for piano:</label>
         <select id="composer-select">
             <optgroup label="Romantic">
-            <option>Chopin</option>
+                <option>Chopin</option>
             </optgroup>
             <optgroup label="Impressionist">
-            <option>Ravel</option>
-        </optgroup>
+                <option>Ravel</option>
+            </optgroup>
         </select>
 
         <label for="guitar-choice">Choose your favorite composer for guitar:</label>
@@ -147,7 +168,7 @@
         <template>
             <h2>Guitar</h2>
             <img src="guitar.jpg" width="214" height="204">
-          </template>
+        </template>
 
 
     </aside>
@@ -155,37 +176,35 @@
 
     <h1>Contact</h1>
 
-    <textarea name="textarea"
-    rows="10" cols="50">Leave Anonymous Feedback Here!
+    <textarea name="textarea" rows="10" cols="50">Leave Anonymous Feedback Here!
     </textarea>
-    <button class="Feedback Button"
-        type="button">
+    <button class="Feedback-Button" type="button">
         Leave Feedback
     </button>
 
 
 
-        <form action="" method="get" class="form">
-            <fieldset>
-                <legend>Contact Me Directly!</legend>
-                <div class="form">
+    <form action="" method="get" class="form">
+        <fieldset>
+            <legend>Contact Me Directly!</legend>
+            <div class="form">
                 <label for="name">Enter your name: </label>
                 <input type="text" name="name" id="name" required>
-                </div>
-                <div class="form">
+            </div>
+            <div class="form">
                 <label for="email">Enter your email: </label>
                 <input type="email" name="email" id="email" required>
-                </div>
-                <div class="form">
+            </div>
+            <div class="form">
                 <input type="submit" value="Contact!">
-                </div>
-            </fieldset>
-        </form>
-        
-        <canvas id="myCanvas" width="100" height="50"></canvas>
+            </div>
+        </fieldset>
+    </form>
+
+    <canvas id="myCanvas" width="100" height="50"></canvas>
 
 
-        <pre> 
+    <pre>
         <strong>
         Here
             is   
@@ -196,14 +215,68 @@
         </pre>
 
 
-        <svg width="100" height="30">
-            <rect width="100" height="30" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
-        </svg>
-        <!-- Rectangle adopted from w3schools -->
+    <svg width="100" height="30">
+        <rect width="100" height="30" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+    </svg>
+    <!-- Rectangle adopted from w3schools -->
 
-        
-<footer>
-    <p>Author: Edgar Flores</p>
-</footer>
- </body>
+    <div>
+        <span>My favorite color is blue.
+            <span>not red.</span>
+        </span>
+    </div>
+
+    <!-- For flexbox -->
+    <div class="box">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three
+        </div>
+    </div>
+    <!-- For grid -->
+    <div class="container">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+
+    </div>
+
+    <!-- to test sibling combinator-->
+    <div>
+        <p>Paragraph 1 in the div.</p>
+    </div>
+    <p>adjacent sibling.</p>
+
+    <p>general sibling</p>
+
+    <h1 id="one" class="two">Testing double class selector</h1>
+
+    <div class="box2">
+        <div>Testing the box model</div>
+    </div>
+    </div>
+
+    <div class="box3">
+        <div>Testing the box model v.2</div>
+    </div>
+    </div>
+    <div class="box3">
+        <div>Testing the universal selector</div>
+    </div>
+    </div>
+
+    <div class="box4">
+        <div>Testing the box model v.3</div>
+    </div>
+    </div>
+
+
+
+    <footer>
+        <p>Author: Edgar Flores</p>
+    </footer>
+</body>
+
 </html>
